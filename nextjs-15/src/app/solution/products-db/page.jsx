@@ -17,7 +17,7 @@ export default async function ProductsDBPage() {
             className="p-4 bg-white text-gray-700 shadow-md rounded-lg"
           >
             <Link
-              href={`/products-db/${product.id}`}
+              href={`/solution/products-db/${product.id}`}
               className="text-xl font-semibold"
             >
               {product.title}
