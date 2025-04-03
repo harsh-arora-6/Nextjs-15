@@ -1,6 +1,10 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
+// components
+import { SubmitButton } from "@/components/form/SubmitButton";
+
+// helpers
 import { addProduct } from "@/prisma-db";
 
 export default function CreateProductServerPage() {
@@ -45,12 +49,7 @@ export default function CreateProductServerPage() {
             min={0}
           />
         </label>
-        <button
-          type="submit"
-          className="w-full text-white p-2 bg-blue-500 rounded disabled:bg-gray-500"
-        >
-          Submit
-        </button>
+        <SubmitButton />
       </form>
     </div>
   );
