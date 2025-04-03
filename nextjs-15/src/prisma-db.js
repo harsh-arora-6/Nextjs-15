@@ -19,13 +19,13 @@ const seedProducts = async () => {
 seedProducts();
 
 export const getProducts = async () => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 1000));
 
   return await prismaClient.product.findMany();
 };
 
 export const getProduct = async (id) => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 1000));
 
   return await prismaClient.product.findUnique({
     where: {
@@ -35,9 +35,9 @@ export const getProduct = async (id) => {
 };
 
 export const addProduct = async ({ title, description, price }) => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 1000));
 
-  return prisma.product.create({
+  return prismaClient.product.create({
     data: {
       title,
       description,
@@ -47,18 +47,18 @@ export const addProduct = async ({ title, description, price }) => {
 };
 
 export const updateProduct = async ({ id, title, description, price }) => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 1000));
 
-  return prisma.product.update({
+  return prismaClient.product.update({
     where: { id },
     data: { title, description, price },
   });
 };
 
 export const deleteProduct = async (id) => {
-  await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 1000));
 
-  return prisma.product.delete({
+  return prismaClient.product.delete({
     where: { id },
   });
 };

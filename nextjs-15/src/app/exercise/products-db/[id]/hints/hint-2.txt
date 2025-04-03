@@ -1,0 +1,3 @@
+Now we can create 'editProduct' server function similar to createProduct.
+
+Instead of calling addProduct, we will call updateProduct function inside it.
