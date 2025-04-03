@@ -3,7 +3,7 @@ import Link from "next/link";
 // actions
 import { getProducts } from "@/prisma-db";
 
-export default async function ProductsDBPage() {
+export default function ProductsDBPage() {
   // fetch products from db directly here
   const products = [
     { id: 1, title: "Title 1", description: "description 1", price: "100" },
@@ -34,7 +34,7 @@ export default async function ProductsDBPage() {
         ))}
       </ul>
       <Link
-        href="/create-product-server"
+        href="/exercise/create-product-server"
         className="p-3 bg-blue-500 w-fit rounded-md"
       >
         Add product

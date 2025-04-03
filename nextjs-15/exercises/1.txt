@@ -1,0 +1,5 @@
+Exercise 1
+
+1. Go to app/exercise/products-db/page.jsx.
+2. Replace the dummy products, by fetching products from db using db helper getProducts (present in prisma-db file).
+3. Start the server using "yarn dev" and go to products-db route in the browser.
