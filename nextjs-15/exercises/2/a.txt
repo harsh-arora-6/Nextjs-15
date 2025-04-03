@@ -1,0 +1,12 @@
+Exercise 2a
+
+1. Go to app/exercise/create-product-server/page.jsx
+2. Create a server function named createProduct inside it (or outside it) which will be passed to the action prop of the form.
+    a. This will receive one argument: formData.
+    b. Extract product fields from formData and add product to db using addProduct function present in prisma-db file
+    c. After the addition redirect to '/products-db' route to see all the products
+3. Run yarn dev and go to '/exercise/products-db' route. Add a new product.
+   Did the added product appear in the list ?
+4. Now run yarn build and yarn start and try the same, Did the added product appear in the list ? 
+   try refreshing the page.
+   Can we see the latest products without refreshing ?
