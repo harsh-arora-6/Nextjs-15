@@ -1,0 +1,3 @@
+Can we make id also a field of the form (a hidden field) ?
+
+Bonus question: Since making id part of the form would require us to properly encrypt it (as it would be part of DOM), do we have an alternate way ?

@@ -7,8 +7,11 @@ import { SubmitButton } from "@/components/form/SubmitButton";
 // server actions
 import { createProduct } from "@/app/exercise/actions/product";
 
-export default function CreateProductServerPage() {
-  const [state, formAction, isPending] = useActionState(createProduct, {
+export default function EditProductPage() {
+  // fetch product and prefill form with its data
+  const product = { title: "Title", description: "Description", price: 200 };
+
+  const [state, formAction] = useActionState(createProduct, {
     errors: {},
   });
 
@@ -22,7 +25,7 @@ export default function CreateProductServerPage() {
               type="text"
               className="p-2 w-full text-black border rounded"
               name="title"
-              defaultValue={state.values?.title ?? ""}
+              defaultValue={product?.title ?? ""}
             />
           </label>
           {state.errors.title ? (
@@ -35,6 +38,7 @@ export default function CreateProductServerPage() {
             type="text"
             className="p-2 w-full text-black border rounded"
             name="description"
+            defaultValue={product?.title ?? ""}
           />
         </label>
         <div>
@@ -44,7 +48,7 @@ export default function CreateProductServerPage() {
               type="number"
               className="p-2 w-full text-black border rounded"
               name="price"
-              defaultValue={state.values?.price ?? 0}
+              defaultValue={product?.price ?? 0}
               min={0}
             />
           </label>

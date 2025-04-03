@@ -1,0 +1,6 @@
+Exercise 3
+
+1. Go to /exercise/products-db/[id]/page.jsx, a form same as creation form has been added there.
+2. We need to prefill the form fields with the values of product which we are editing. (Can we fetch the product using its id ? How can we get the id ?)
+3. We need to create an editProduct server function similar to createProduct which would update product instead of adding product to db.
+   For editing we would be needing the id of the product also. How can we pass the id to the editProduct server function ?

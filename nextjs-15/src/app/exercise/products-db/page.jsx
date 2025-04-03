@@ -3,12 +3,9 @@ import Link from "next/link";
 // actions
 import { getProducts } from "@/prisma-db";
 
-export default function ProductsDBPage() {
+export default async function ProductsDBPage() {
   // fetch products from db directly here
-  const products = [
-    { id: 1, title: "Title 1", description: "description 1", price: "100" },
-    { id: 2, title: "Title 2", description: "description 2", price: "200" },
-  ];
+  const products = await getProducts();
 
   return (
     <section className="flex flex-col space-y-4 p-4">
@@ -20,7 +17,7 @@ export default function ProductsDBPage() {
             className="p-4 bg-white text-gray-700 shadow-md rounded-lg"
           >
             <Link
-              href={`/products-db/${product.id}`}
+              href={`/exercise/products-db/${product.id}`}
               className="text-xl font-semibold"
             >
               {product.title}
