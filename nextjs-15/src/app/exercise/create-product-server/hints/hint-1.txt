@@ -1,0 +1,7 @@
+import { addProduct } from "@/prisma-db";
+
+const createProduct = (formData) => {
+  "use server";
+
+  // call addProduct
+};

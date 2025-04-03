@@ -1,0 +1,2 @@
+sol 1. Can we pass id as a part of formData ?
+sol 2. Can we bind the id to the editProduct server function ?
