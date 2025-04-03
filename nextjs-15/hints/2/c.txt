@@ -1,0 +1,9 @@
+We can use useActionState !!
+
+const [state, formAction, isPending] = useActionState(createProduct,{errors:{}});
+
+Now createProduct should receive two arguments, prevState and formData.
+
+Based on the values returned in state from createProduct server function, we can update the UI.
+
+Bonus question: Can we also retain the values in the form along with showing error message on UI incase there is a validation error ?

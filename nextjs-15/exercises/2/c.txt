@@ -1,0 +1,9 @@
+Exercise 2c
+
+Now we want to validate the user's input before adding product it in db.
+
+Do this by using getErrors function (present in '@/helpers') or some other validation as you like, inside the createProduct
+server function we have created, to validate title, description and price of the product. 
+Now incase of errors we don't want to add product to db and instead we want to somehow update the UI based on those errors.
+
+Which is the hook which returns the response from server function ?
