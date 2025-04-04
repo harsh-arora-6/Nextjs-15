@@ -7,7 +7,7 @@ import { revalidatePath } from "next/cache";
 import { getErrors } from "@/helpers";
 
 // db action
-import { addProduct, updateProduct } from "@/prisma-db";
+import { addProduct, deleteProduct, updateProduct } from "@/prisma-db";
 
 export const createProduct = async (prevState, formData) => {
   const title = formData.get("title");
@@ -41,4 +41,10 @@ export const editProduct = async (id, prevState, formData) => {
 
   revalidatePath("/solution/products-db");
   redirect("/solution/products-db");
+};
+
+export const removeProduct = async (id) => {
+  await deleteProduct(id);
+
+  revalidatePath("/solution/products-db");
 };
