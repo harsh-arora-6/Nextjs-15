@@ -1,0 +1,7 @@
+Exercise 4a
+
+Now similar to editProduct we need to implement removeProduct for removing a product.
+
+1. Go to /exercise/products-db
+2. Create a removeProduct server function in /exercise/actions, which accepts id of product and calls deleteProduct of prisma-db file.
+3. Can we wrap the delete button in a form and pass removeProduct to it, similar to editProduct ?
