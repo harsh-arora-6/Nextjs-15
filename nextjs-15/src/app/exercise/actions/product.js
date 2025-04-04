@@ -7,7 +7,7 @@ import { revalidatePath } from "next/cache";
 import { getErrors } from "@/helpers";
 
 // db action
-import { addProduct, updateProduct } from "@/prisma-db";
+import { addProduct, deleteProduct, updateProduct } from "@/prisma-db";
 
 export const createProduct = async (prevState, formData) => {
   const title = formData.get("title");
@@ -23,7 +23,7 @@ export const createProduct = async (prevState, formData) => {
   await addProduct({ title, description, price: +price });
 
   revalidatePath("/exercise/products-db");
-  redirect("/exercise/products-db");
+  // redirect("/exercise/products-db");
 };
 
 export const editProduct = async (id, prevState, formData) => {
@@ -41,4 +41,10 @@ export const editProduct = async (id, prevState, formData) => {
 
   revalidatePath("/exercise/products-db");
   redirect("/exercise/products-db");
+};
+
+export const removeProduct = async (id) => {
+  await deleteProduct(id);
+
+  revalidatePath("/exercise/products-db");
 };

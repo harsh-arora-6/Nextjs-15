@@ -1,0 +1,17 @@
+Exercise 5
+
+Now coming to the cherry-on-top part of server functions in form.
+We get progressive enhancement: https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+
+Basically user is able to submit the form, while js is loading or is disabled.
+
+To test this:
+
+1. Go to /exercise/create-product-server/page.jsx
+2. useActionState takes a third argument which is the permalink. Just add '/exercise/product-submission' string as third argument.
+Here, we are saying that we want to go to /exercise/product-submission route when js is loading or is disabled and the form is submitted by the user.
+Check the code for /exercise/product-submission also.
+3. Run yarn build and yarn start
+4. Go to browser, in sources tab press 'cmd + p' and type disable javascript.
+5. After disabling, go to /exercise/create-product-server route.
+6. Submit the form and boom it gets submitted without js!!. Check /exercise/products-db route to verify successful addition of new product to db.
