@@ -8,9 +8,13 @@ import { SubmitButton } from "@/components/form/SubmitButton";
 import { createProduct } from "@/app/solution/actions/product";
 
 export default function CreateProductServerPage() {
-  const [state, formAction, isPending] = useActionState(createProduct, {
-    errors: {},
-  });
+  const [state, formAction, isPending] = useActionState(
+    createProduct,
+    {
+      errors: {},
+    },
+    "/solution/product-submission"
+  );
 
   return (
     <div className="flex justify-center items-center h-screen">

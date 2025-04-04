@@ -23,7 +23,7 @@ export const createProduct = async (prevState, formData) => {
   await addProduct({ title, description, price: +price });
 
   revalidatePath("/solution/products-db");
-  redirect("/solution/products-db");
+  // redirect("/solution/products-db");
 };
 
 export const editProduct = async (id, prevState, formData) => {
