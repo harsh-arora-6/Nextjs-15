@@ -2,7 +2,36 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### Database setup
+
+1. delete the prisma folder at root level and run:
+
+```bash
+npx prisma init --datasource-provider=sqlite
+```
+This will generate a schema.prisma file inside `prisma` directory and a .env file with DATABASE_URL.
+
+2. Replace the DATABASE URL with the name of file with which you want to name the db and add models which you want to add
+For example:
+
+```
+model Product {
+  id Int @id @default(autoincrement())
+  title String
+  price Int
+  description String?
+}
+```
+
+Then, run:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+This will do the following initialise the db with the model mentioned and in the filename mentioned in DATABASE_URL. It will also install Prisma Client.
+
+For running the next dev server:
 
 ```bash
 npm run dev
