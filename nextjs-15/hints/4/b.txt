@@ -1,0 +1,6 @@
+Yes !! We have useOptimistic hook.
+
+1. Go to /exercise/products-db/page.jsx
+2. Split the code in two files, such that page.jsx will fetch the list of products from db
+   and the other file will take those products and render the list of products.
+3. Now try using useOptimistic in the other file.

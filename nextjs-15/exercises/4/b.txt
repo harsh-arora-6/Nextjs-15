@@ -1,0 +1,6 @@
+Exercise 4b
+
+Now assuming that deleting a product from a db is very efficient, and we want the user to instantly see the
+updated list of products instead of waiting for the deletion to complete.
+
+is there a hook which helps us update UI like this ?
