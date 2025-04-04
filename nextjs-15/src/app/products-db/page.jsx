@@ -4,9 +4,10 @@ import Link from "next/link";
 import { getProducts } from "@/prisma-db";
 import { removeProduct } from "@/actions/product";
 
-export default async function ProductsDBPage() {
+export default async function ProductsDBPage({ searchParams }) {
+  const { query } = await searchParams;
   // direct interaction with DB.
-  const products = await getProducts();
+  const products = await getProducts(query);
 
   return (
     <section className="flex flex-col space-y-4 p-4">

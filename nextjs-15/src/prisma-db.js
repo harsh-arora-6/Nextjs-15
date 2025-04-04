@@ -18,8 +18,19 @@ const seedProducts = async () => {
 
 seedProducts();
 
-export const getProducts = async () => {
+export const getProducts = async (query) => {
   await new Promise((res) => setTimeout(res, 1000));
+
+  if (query) {
+    return await prismaClient.product.findMany({
+      where: {
+        OR: [
+          { title: { contains: query } },
+          { description: { contains: query } },
+        ],
+      },
+    });
+  }
 
   return await prismaClient.product.findMany();
 };
