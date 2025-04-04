@@ -1,2 +1,0 @@
-Can we use the fact that the current route is a dynamic route ?
-is id present in the route ?
