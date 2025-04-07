@@ -29,7 +29,7 @@ Then, run:
 npx prisma migrate dev --name init
 ```
 
-This will do the following initialise the db with the model mentioned and in the filename mentioned in DATABASE_URL. It will also install Prisma Client.
+This will initialise the db with the model mentioned in the filename mentioned in DATABASE_URL. It will also install Prisma Client.
 
 For running the next dev server:
 
